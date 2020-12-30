@@ -124,11 +124,15 @@ View.prototype.setupEasel = function() {
 View.prototype.addRow = function() {
   const rowIdx = this.$el.find(".row").length;
   const $row = $("<ul>").addClass("row").addClass("group");
+  
   for(let colIdx = 0; colIdx < 20; colIdx++) {
+
     const $square = $("<li>").addClass("square").attr("data-pos", [rowIdx, colIdx]);
+
     $square.on("mouseenter", (e) => {
       const $square = $(e.currentTarget);
       $square.css("background-color", window._randomColorString());
+
     });
     $row.append($square);
   }

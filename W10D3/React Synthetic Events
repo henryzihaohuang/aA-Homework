@@ -1,0 +1,14 @@
+React version of eventHandlers
+
+
+const handleClick = e => {
+    event.preventDefault();
+    alert("clicked!");
+}
+
+const SimpleButton = () => {
+    <input type="submit" onClick={handleClick}> Click Me! 
+    </input>
+
+}
+

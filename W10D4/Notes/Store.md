@@ -50,4 +50,18 @@ const addOrange = {
 };
 
 
+============================================================
+Subscribing to the Store
+
+Once store has processed dispatch, it triggers subscribers--callbacks that can be added to store
+
+const display = () => {
+    console.log(store.getState());
+
+}
+
+const unsubscribeDisplay = store.subscribe(display);
+store.dispatch(addOrange);
+
+unsubscribeDisplay();
 

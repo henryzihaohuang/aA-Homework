@@ -9,8 +9,8 @@ export const REQUEST_SEARCH_GIPHYS = 'REQUEST_SEARCH_GIPHYS';
 
 export const fetchSearchGiphys = searchTerm => {
     return(dispatch) => {
-        APIUtil.fetchSearchGiphys(searchTerm).then(
-            giphys => dispatch(receiveSearchGiphys(giphys.data))
+        APIUtil.fetchSearchGiphys(searchTerm)
+        .then(giphys => dispatch(receiveSearchGiphys(giphys.data))
         )
     }
 };
